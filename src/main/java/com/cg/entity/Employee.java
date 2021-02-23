@@ -1,18 +1,21 @@
 package com.cg.entity;
 
-//@Document(collection="emp")
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection="emp")
 public class Employee {
-//	@Id
-	private int empId;
+	@Id
+	private int id;
 	private String empName;
-	private int contact;
+	private String contact;
 
 	public int getEmpId() {
-		return empId;
+		return id;
 	}
 
 	public void setEmpId(int empId) {
-		this.empId = empId;
+		this.id = empId;
 	}
 
 	public String getEmpName() {
@@ -23,11 +26,11 @@ public class Employee {
 		this.empName = empName;
 	}
 
-	public int getContact() {
+	public String getContact() {
 		return contact;
 	}
 
-	public void setContact(int contact) {
+	public void setContact(String contact) {
 		this.contact = contact;
 	}
 
@@ -36,9 +39,9 @@ public class Employee {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(int empId, String empName, int contact) {
+	public Employee(int empId, String empName, String contact) {
 		super();
-		this.empId = empId;
+		this.id = empId;
 		this.empName = empName;
 		this.contact = contact;
 	}

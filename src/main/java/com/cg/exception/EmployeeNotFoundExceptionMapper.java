@@ -6,6 +6,12 @@ import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
 import org.springframework.beans.factory.annotation.Value;
+/*******************************************************************************************************************************
+ * -Author					 : Piyush Srivastava 
+ * -Created/Modified Date 	 : 24-02-2021
+ * -Description 			 : Employee Exception Mapper
+ * 
+ *******************************************************************************************************************************/
 
 @Provider
 public class EmployeeNotFoundExceptionMapper implements ExceptionMapper<EmployeeNotFoundException> {

@@ -1,21 +1,18 @@
-package com.cg.service;
+package com.cg.dao;
 
-import java.util.List;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-import javax.ws.rs.core.Response;
+import com.cg.entity.Employee;
 
-import com.cg.model.EmployeeModel;
 /*******************************************************************************************************************************
  * -Author					 : Piyush Srivastava 
  * -Created/Modified Date 	 : 24-02-2021
- * -Description 			 : Employee Service Interface
+ * -Description 			 : Employee Mongo Repository
  * 
  *******************************************************************************************************************************/
 
-public interface EmpService {
-
-	List<EmployeeModel> getAllEmps();
-
-	Response findById(int id);
+@Repository
+public interface EmpMongoRepo extends MongoRepository<Employee, Integer> {
 
 }

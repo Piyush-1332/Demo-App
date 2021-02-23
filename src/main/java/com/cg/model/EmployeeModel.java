@@ -1,17 +1,23 @@
 package com.cg.model;
+/*******************************************************************************************************************************
+ * -Author					 : Piyush Srivastava 
+ * -Created/Modified Date 	 : 24-02-2021
+ * -Description 			 : Employee data Transfer Object
+ * 
+ *******************************************************************************************************************************/
 
 public class EmployeeModel {
 
-	private int empId;
+	private int id;
 	private String empName;
 	private String contact;
 
 	public int getEmpId() {
-		return empId;
+		return id;
 	}
 
 	public void setEmpId(int empId) {
-		this.empId = empId;
+		this.id = empId;
 	}
 
 	public String getEmpName() {
@@ -35,7 +41,7 @@ public class EmployeeModel {
 	}
 
 	public EmployeeModel(int empId, String empName, String contact) {
-		this.empId = empId;
+		this.id = empId;
 		this.empName = empName;
 		this.contact = contact;
 	}
